@@ -3,16 +3,28 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <parent>
-    <artifactId>@@@artifactId@@@</artifactId>
-    <groupId>@@@groupId@@@</groupId>
-    <version>1.0.x-SNAPSHOT</version>
+    <artifactId>platform</artifactId>
+    <groupId>org.exoplatform.platform</groupId>
+    <version>5.0.2</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>@@@groupId@@@</groupId>
-  <artifactId>@@@artifactId@@@-services</artifactId>
-  <version>1.0.x-SNAPSHOT</version>
-  <name>@@@name@@@ - Services</name>
+  <groupId>org.exoplatform.platform</groupId>
+  <artifactId>platform-services</artifactId>
+  <version>5.0.2</version>
+    <dependencies>
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>1.7.11</version>
+        </dependency>
+        <dependency>
+            <groupId>org.exoplatform.kernel</groupId>
+            <artifactId>exo.kernel.container</artifactId>
+            <version>5.0.2</version>
+        </dependency>
+    </dependencies>
+    <name>platform - Services</name>
   <build>
-    <finalName>@@@artifactId@@@-services</finalName>
+    <finalName>platform-services</finalName>
   </build>
 </project>
