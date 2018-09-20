@@ -22,9 +22,14 @@
 
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd http://www.exoplatform.org/xml/ns/kernel_1_2.xsd"
 	xmlns="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd">
-<component>
-	<key>org.exoplatform.addons.MyService</key>
-	<type>org.exoplatform.addons.MyService</type>
-</component>
+	<component>
+		<key>org.exoplatform.addons.MyService</key>
+		<type>org.exoplatform.addons.MyService</type>
+	</component>
+	<component>
+		<key>org.exoplatform.addons.MySecondService</key>
+		<type>org.exoplatform.addons.MySecondService</type>
+	</component>
+
 
 </configuration>
