@@ -25,7 +25,8 @@
 	<component>
 		<key>org.exoplatform.addons.MyService</key>
 		<type>org.exoplatform.addons.MyService</type>
-	</component>
+    </component>
+
 	<component>
 		<key>org.exoplatform.addons.MySecondService</key>
 		<type>org.exoplatform.addons.MySecondService</type>
