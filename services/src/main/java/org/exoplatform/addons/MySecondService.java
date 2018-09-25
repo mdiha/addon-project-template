@@ -6,7 +6,7 @@ public class MySecondService {
     private static final Log LOG = ExoLogger.getLogger(MySecondService.class);
 
     public void echo() {
-        LOG.info("Simple Service Started");
+        LOG.info("Second Service Started");
 
     }
 }
