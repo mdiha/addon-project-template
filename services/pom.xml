@@ -47,6 +47,16 @@
             <artifactId>exo.jcr.component.ext</artifactId>
             <version>5.2.x-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>org.exoplatform.commons</groupId>
+            <artifactId>commons-api</artifactId>
+            <version>5.2.x-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.exoplatform.social</groupId>
+            <artifactId>social-component-core</artifactId>
+            <version>5.2.x-SNAPSHOT</version>
+        </dependency>
     </dependencies>
     <name>platform - Services</name>
   <build>

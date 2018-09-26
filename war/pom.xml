@@ -22,14 +22,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>@@@groupId@@@</groupId>
-    <artifactId>@@@artifactId@@@</artifactId>
-   <version>1.0.x-SNAPSHOT</version>
+    <groupId>org.exoplatform.platform</groupId>
+    <artifactId>platform</artifactId>
+   <version>5.0.2</version>
   </parent>
-  <artifactId>@@@artifactId@@@-war</artifactId>
+  <artifactId>platform-war</artifactId>
   <packaging>war</packaging>
-  <name>@@@name@@@ - Webapp</name>
+  <name>FavouriteActivityEntity - Webapp</name>
   <build>
-    <finalName>@@@artifactId@@@-extension</finalName>
+    <finalName>platform1-extension</finalName>
   </build>
 </project>

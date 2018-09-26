@@ -2,24 +2,24 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>@@@groupId@@@</groupId>
-    <artifactId>@@@artifactId@@@</artifactId>
-    <version>1.0.x-SNAPSHOT</version>
+    <groupId>org.exoplatform.platform</groupId>
+    <artifactId>platform</artifactId>
+    <version>5.0.2</version>
   </parent>
-  <artifactId>@@@artifactId@@@-packaging</artifactId>
+  <artifactId>platform-packaging</artifactId>
   <packaging>pom</packaging>
-  <name>@@@name@@@ - Packaging</name>
+  <name>FavouriteActivityEntity - Packaging</name>
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>@@@artifactId@@@-war</artifactId>
-      <version>1.0.x-SNAPSHOT</version>
+      <artifactId>platform-war</artifactId>
+      <version>5.0.2</version>
       <type>war</type>
       <scope>provided</scope>
     </dependency>
   </dependencies>
   <build>
-    <finalName>@@@artifactId@@@</finalName>
+    <finalName>platform</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -32,7 +32,7 @@
               <goal>single</goal>
             </goals>
             <configuration>
-              <finalName>@@@artifactId@@@</finalName>
+              <finalName>platform</finalName>
               <appendAssemblyId>false</appendAssemblyId>
               <descriptors>
                 <descriptor>src/main/assemblies/packaging.xml</descriptor>
