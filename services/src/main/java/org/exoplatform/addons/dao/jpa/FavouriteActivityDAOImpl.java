@@ -36,7 +36,7 @@ public class FavouriteActivityDAOImpl extends GenericDAOJPAImpl<FavouriteActivit
 
     @Override
     public FavouriteActivityEntity update(FavouriteActivityEntity favouriteActivityEntity) {
-        return super.update(favouriteActivityEntity)
+        return super.update(favouriteActivityEntity);
     }
 
     @Override
