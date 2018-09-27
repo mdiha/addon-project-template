@@ -1,7 +1,7 @@
-package org.exoplatform.addons.dao.jpa;
+package org.exoplatform.dao.jpa;
 
-import org.exoplatform.addons.dao.FavouriteActivityDAO;
-import org.exoplatform.addons.entity.FavouriteActivityEntity;
+import org.exoplatform.dao.FavouriteActivityDAO;
+import org.exoplatform.entity.FavouriteActivityEntity;
 import org.exoplatform.commons.persistence.impl.GenericDAOJPAImpl;
 
 import java.util.List;

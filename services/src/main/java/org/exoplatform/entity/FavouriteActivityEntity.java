@@ -1,7 +1,7 @@
-package org.exoplatform.addons.entity;
+package org.exoplatform.entity;
 
 import org.exoplatform.commons.api.persistence.ExoEntity;
-import org.exoplatform.social.core.chromattic.entity.ActivityEntity;
+
 
 import javax.persistence.*;
 import java.util.Calendar;
@@ -10,6 +10,11 @@ import java.util.Calendar;
 @ExoEntity
 @Table(name = "FavActEntity")
 public class FavouriteActivityEntity {
+
+    public Long getID() {
+        return ID;
+    }
+
     @Id
     @GeneratedValue
     @Column(name = "FavActEntity_ID")
@@ -18,22 +23,27 @@ public class FavouriteActivityEntity {
     @Column(name = "ACTIVITY_TITLE")
     private String activityTitle;
 
-    @Column(name = "TARGET_ACTIVITY")
-    private ActivityEntity activityEntity;
-
     @Transient
     @Column(name = "FAVORITED_DATE")
     private Calendar favDate;
 
-    public Long getID() {
-        return ID;
+    @Column(name = "ACTIVITY_ID")
+    private Long activityEntity;
+
+    public FavouriteActivityEntity (String activtitle){
+        activityTitle =activtitle;
+
     }
 
     public String getActivityTitle() {
         return activityTitle;
     }
 
-    public ActivityEntity getActivityEntity() {
+    public Calendar getFavDate() {
+        return favDate;
+    }
+
+    public Long getActivityEntity() {
         return activityEntity;
     }
 
@@ -41,15 +51,11 @@ public class FavouriteActivityEntity {
         this.activityTitle = activityTitle;
     }
 
-    public void setActivityEntity(ActivityEntity activityEntity) {
-        this.activityEntity = activityEntity;
-    }
-
     public void setFavDate(Calendar favDate) {
         this.favDate = favDate;
     }
 
-    public Calendar getFavDate() {
-        return favDate;
+    public void setActivityEntity(Long activityEntity) {
+        this.activityEntity = activityEntity;
     }
 }

@@ -22,7 +22,7 @@
 
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd http://www.exoplatform.org/xml/ns/kernel_1_2.xsd"
 	xmlns="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd">
-	<component>
+	<!--<component>
 		<key>org.exoplatform.addons.MyService</key>
 		<type>org.exoplatform.addons.MyService</type>
     	</component>
@@ -46,10 +46,21 @@
 		<key>org.exoplatform.entity.FavouriteActivityEntity</key>
 		<type>org.exoplatform.entity.FavouriteActivityEntity</type>
 	</component>
-	<component>
-		<key>org.exoplatform.addons.FavActCrudService</key>
-		<type>org.exoplatform.addons.FavActCrudService</type>
-	</component>
-
+-->
+	<external-component-plugins>
+		<target-component>org.exoplatform.commons.api.persistence.DataInitializer</target-component>
+		<component-plugin>
+			<name>TrainingRDBMSChangeLogsPlugin</name>
+			<set-method>addChangeLogsPlugin</set-method>
+			<type>org.exoplatform.commons.persistence.impl.ChangeLogsPlugin</type>
+			<init-params>
+				<values-param>
+					<name>changelogs</name>
+					<description>Change logs of Training RDBMS</description>
+					<value>db/changelog/training-rdbms.db.changelog-1.0.0.xml</value>
+				</values-param>
+			</init-params>
+		</component-plugin>
+	</external-component-plugins>
 
 </configuration>

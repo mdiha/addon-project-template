@@ -17,8 +17,7 @@ import javax.jcr.Session;
 import javax.jcr.SimpleCredentials;
 import javax.jcr.query.Query;
 import javax.jcr.query.QueryManager;
-
-
+import java.util.Calendar;
 
 
 /**
@@ -30,6 +29,7 @@ public class MyService implements Startable {
 	private static final Log LOG = ExoLogger.getLogger(MyService.class);
 	Repository repository;
 	MySecondService secondservice;
+	Calendar rightNow = Calendar.getInstance();
 
 	public  MyService (MySecondService mySecondService){
 		this.secondservice=mySecondService;
@@ -37,6 +37,7 @@ public class MyService implements Startable {
 
 	public void start() {
 		LOG.info("Service Started");
+		LOG.info("***Today: "+rightNow);
 		secondservice.echo();
 		ExoContainer myContainer = ExoContainerContext.getCurrentContainer();
 		RepositoryService repositoryService = (RepositoryService) myContainer. getComponentInstanceOfType(RepositoryService.class);
