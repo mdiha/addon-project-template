@@ -30,6 +30,6 @@
   <packaging>war</packaging>
   <name>FavouriteActivityEntity - Webapp</name>
   <build>
-    <finalName>platform1-extension</finalName>
+    <finalName>platform1-war</finalName>
   </build>
 </project>

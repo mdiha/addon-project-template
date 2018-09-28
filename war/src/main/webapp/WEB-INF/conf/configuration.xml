@@ -50,6 +50,10 @@
 		<key>org.exoplatform.addons.FavActCrudService</key>
 		<type>org.exoplatform.addons.FavActCrudService</type>
 	</component>
+	<component>
+		<key>org.exoplatform.addons.MyRESTService</key>
+		<type>org.exoplatform.addons.MyRESTService</type>
+	</component>
 
 
 </configuration>

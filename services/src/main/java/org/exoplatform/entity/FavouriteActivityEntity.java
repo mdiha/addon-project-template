@@ -1,6 +1,7 @@
 package org.exoplatform.entity;
 
 import org.exoplatform.commons.api.persistence.ExoEntity;
+import org.exoplatform.social.core.jpa.storage.entity.ActivityEntity;
 
 
 import javax.persistence.*;
@@ -10,10 +11,6 @@ import java.util.Calendar;
 @ExoEntity
 @Table(name = "FavActEntity")
 public class FavouriteActivityEntity {
-
-    public Long getID() {
-        return ID;
-    }
 
     @Id
     @GeneratedValue
@@ -27,12 +24,20 @@ public class FavouriteActivityEntity {
     @Column(name = "FAVORITED_DATE")
     private Calendar favDate;
 
-    @Column(name = "ACTIVITY_ID")
-    private Long activityEntity;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "ACTIVITY_ID", nullable = true)
+    private ActivityEntity activityEntity;
 
-    public FavouriteActivityEntity (String activtitle){
-        activityTitle =activtitle;
+    public FavouriteActivityEntity() {
+    }
 
+    public FavouriteActivityEntity (String title){
+        activityTitle =title;
+
+    }
+
+    public Long getID() {
+        return ID;
     }
 
     public String getActivityTitle() {
@@ -43,7 +48,7 @@ public class FavouriteActivityEntity {
         return favDate;
     }
 
-    public Long getActivityEntity() {
+    public ActivityEntity getActivityEntity() {
         return activityEntity;
     }
 
@@ -55,7 +60,7 @@ public class FavouriteActivityEntity {
         this.favDate = favDate;
     }
 
-    public void setActivityEntity(Long activityEntity) {
+    public void setActivityEntity(ActivityEntity activityEntity) {
         this.activityEntity = activityEntity;
     }
 }

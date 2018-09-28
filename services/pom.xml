@@ -62,6 +62,12 @@
             <artifactId>social-component-core-jpa</artifactId>
             <version>5.2.x-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>org.exoplatform.ws</groupId>
+            <artifactId>exo.ws.rest.core</artifactId>
+            <version>5.0.2</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
     <name>platform - Services</name>
   <build>
